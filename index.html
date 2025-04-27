@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjelo Bino Thomas | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --card-bg: #1e1e1e;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: var(--card-bg);
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: var(--text-color);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    table, th, td {
+      border: 1px solid var(--text-color);
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: center;
+    }
+    .toggle-btn {
+      margin: 1rem;
+      padding: 0.5rem 1.5rem;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    a {
+      color: lightblue;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "⭐ ";
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+
+  <header>
+    <h1>Anjelo Bino Thomas</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#qualifications">Qualifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm an Engineering student pursuing B.Tech in Artificial Intelligence and Data Science at Vimal Jyothi Engineering College, Chemperi. I specialize in coding and programming.</p>
+  </section>
+
+  <section id="qualifications">
+    <h2>Qualifications</h2>
+    <h3>Education</h3>
+    <table>
+      <tr>
+        <th>Education Level</th>
+        <th>Institution</th>
+      </tr>
+      <tr>
+        <td>Higher Secondary</td>
+        <td>Sacred Heart Thiruvambady</td>
+      </tr>
+      <tr>
+        <td>High School</td>
+        <td>Sacred Heart Thiruvambady</td>
+      </tr>
+    </table>
+
+    <h3>Skills</h3>
+    <ul>
+      <li>Python Programming</li>
+      <li>Design Thinking</li>
+      <li>Photo and Video Editing</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:anjelobino7@gmail.com">anjelobino7@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/AnjeloBinoThomas" target="_blank">AnjeloBinoThomas</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Anjelo Bino Thomas</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anjelo Bino Thomas. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
+      if (currentBg === '#121212') {
+        root.style.setProperty('--bg-color', '#ffffff');
+        root.style.setProperty('--text-color', '#121212');
+        root.style.setProperty('--card-bg', '#f0f0f0');
+      } else {
+        root.style.setProperty('--bg-color', '#121212');
+        root.style.setProperty('--text-color', '#ffffff');
+        root.style.setProperty('--card-bg', '#1e1e1e');
+      }
+    }
+  </script>
+
+</body>
+</html>
